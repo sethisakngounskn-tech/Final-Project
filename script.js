@@ -81,7 +81,7 @@ function handleSearch() {
     console.log(searchTerm)
 
     let matchCars = CARS.filter((object) =>
-      object.title.includes(searchTerm) || object.description.toLowerCase().includes(searchTerm))
+      object.title.includes(searchTerm) || object.model.toLowerCase().includes(searchTerm))
     console.log(matchCars)
 
     renderCars(matchCars)
