@@ -9,7 +9,6 @@ function main() {
 
   handleSearch()
   sort()
-  carTag()
   renderCars(CARS)
   // animateSlideShow()
   timer = setInterval(animateSlideShow, 1000)
@@ -241,15 +240,4 @@ function randomCar() {
   let randomValue = CARS[rec]
   console.log(randomValue)
   renderCars([randomValue]) 
-}
-
-function carTag() {
-  const card = document.querySelectorAll(".card")
-  if (CARS.price < 100000) {
-    card.style.backgroundColor = "green"
-  } else if (CARS.price > 100000 && CARS.price < 200000) {
-    card.style.backgroundColor = "yellow"
-  } else if (CARS.price > 200000 && CARS.price < 300000) {
-    card.style.backgroundColor = "red"
-  }
 }
