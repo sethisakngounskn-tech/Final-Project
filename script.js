@@ -7,26 +7,27 @@ let timer = null
 
 function main() {
 
-  renderCars(CARS)
   handleSearch()
   sort()
+  carTag()
+  renderCars(CARS)
   // animateSlideShow()
   timer = setInterval(animateSlideShow, 1000)
   modal()
 }
 
 function modal() {
-  const detailBtns = document.querySelectorAll(".detail-btn")
+  const carsWrapper = document.querySelector(".cars-wrapper")
 
-  for (let i = 0; i < detailBtns.length; i++) {
-    detailBtns[i].addEventListener("click", () => {
-      let id = detailBtns[i].dataset.index
-      console.log(id)
+  carsWrapper.addEventListener("click", (e) => {
+    const detailBtn = e.target.closest(".detail-btn")
 
-      openModal(id)
-      HandleTab()
-    })
-  }
+    if (!detailBtn) return
+
+    openModal(detailBtn.dataset.index)
+    HandleTab()
+  })
+
   document.addEventListener("click", (e) => {
     if (e.target.matches("#closeBtn")) {
       closeModal()
@@ -105,6 +106,7 @@ function sort() {
       const sortByPrice = CARS.sort((objA, objB) => objB.price - objA.price)
       renderCars(sortByPrice)
     }
+    
   })
 
   const ratingBtn = document.querySelector("#ratingBtn")
@@ -158,7 +160,7 @@ function openModal(id) {
       <div class="modal-overlay">
         <div class="modal-head">
           <h4>${carobject.model}</h4>
-          <button id="closeBtn" style="border-radius: 50%; padding: 5px; padding-left: 7px; padding-right: 7px;"> X </button>
+          <button id="closeBtn" aria-label="Close details">X</button>
         </div>
       <section id="tabbar">
 
@@ -241,3 +243,13 @@ function randomCar() {
   renderCars([randomValue]) 
 }
 
+function carTag() {
+  const card = document.querySelectorAll(".card")
+  if (CARS.price < 100000) {
+    card.style.backgroundColor = "green"
+  } else if (CARS.price > 100000 && CARS.price < 200000) {
+    card.style.backgroundColor = "yellow"
+  } else if (CARS.price > 200000 && CARS.price < 300000) {
+    card.style.backgroundColor = "red"
+  }
+}
