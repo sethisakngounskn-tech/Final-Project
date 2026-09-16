@@ -4,8 +4,9 @@
 }
 
 body {
-  background-color: black;
-  color: blue;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  color: whitesmoke;
+  margin: 10px;
 
 }
 img {
@@ -137,6 +138,7 @@ frame {
 }
 
 #searchCar {
+  margin:10px;
   width: 400px;
   height: 30px;
   border-radius: 5px;
@@ -145,7 +147,7 @@ frame {
 }
 
 #search-btn {
-  margin-left: 10px;
+  margin: 10px;
   padding: 3px;
   font-size: 20px;
   border: rgb(0, 0, 0), 3px, solid;
@@ -238,12 +240,6 @@ frame {
   background-size: 400% 400%
 }
 
-.header h1 {
-  padding: 10px;
-  font-size: 50px;
-  text-align: center;
-  color: white;
-}
 
 @keyframes gradientShift {
   0% {
@@ -313,7 +309,7 @@ button {
   left: 0;
   margin: 0 auto;
   z-index: 9999;
-  background-image: url('./images/food5.jpg');
+  
   background-size: cover;
 
 }
@@ -357,6 +353,8 @@ button {
 
 
 .card {
+  color: var(--txt);
+  background-color: var(--elm-bg);
   margin: 0;
 }
 
@@ -371,13 +369,67 @@ button {
   gap: 15px;
 }
 
-.tab-btn {
+.modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 15px;
+  color: white;
+}
+
+.modal-head h4 {
+  margin: 0;
+  font-size: 28px;
+}
+
+#closeBtn {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#closeBtn:hover {
+  background: white;
+  color: #111827;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
   padding: 5px;
-  font-size: 16px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.tab-btn:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .tab-btn.active {
-  background-color: lightcoral;
+  background-color: white;
+  color: #111827;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .content {

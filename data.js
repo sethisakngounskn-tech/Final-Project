@@ -46,7 +46,7 @@ const CARS = [
         title: "BMW",
         description: "BMW is a major German Official BMW Website company that builds luxury cars, sports vehicles, and motorcycles ",
         price: "140000",
-        image: "https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/all-models/model-navigation/bmw-x6-m-competition-flyout1.png",
+        image: "car_5.webp",
         rating: 97,
         year: 1916,
         model: "BMW X6"
@@ -66,7 +66,7 @@ const CARS = [
         title: "Mclaren",
         description: "BMW is a major German Official BMW Website company that builds luxury cars, sports vehicles, and motorcycles ",
         price: "320000",
-        image: "https://cars-assets-production.mclaren.com/1410/conversions/mclaren_automotive_750s_spider_front_right_profile-1000.png",
+        image: "car_7.jpeg",
         rating: 90,
         year: 1964,
         model: "GTS Mclaren"
@@ -77,7 +77,7 @@ const CARS = [
         title: "Chrysler",
         description: "Chrysler is an American automobile brand owned by Stellantis that focuses on upscale family vehicles and innovative minivans  ",
         price: "57000",
-        image: "https://platform.cstatic-images.com/in/v2/stock_photos/51b1ffba-acda-47ea-966f-a615b69b5d5b/0ad75471-b962-4eaf-9aaf-d8ff789ee4bc.png",
+        image: "car_8.webp",
         rating: 78,
         year: 1957,
         model: "Chryslar 300C"
